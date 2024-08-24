@@ -6,7 +6,15 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/bearer": "^1.1.1",
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^1.1.0",
+    "@elysiajs/html": "^1.1.0",
+    "@elysiajs/jwt": "^1.1.0",
+    "@elysiajs/static": "^1.1.0",
+    "@elysiajs/swagger": "^1.1.1",
+    "elysia": "latest",
+    "elysia-helmet": "^2.0.0"
   },
   "devDependencies": {
     "bun-types": "latest"

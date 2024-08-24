@@ -1,0 +1,39 @@
+{
+  "my-snippet": {
+    "prefix": ["my-snippet","mysnippet"],
+    "body": [
+      "\"$10\":{",
+      "  \"prefix\":[$20],",
+      "  \"body\":[$30],",
+      "  \"description\":\"$40\"",
+      "}",
+    ],
+    "description": "3i snippet"
+  },
+  "myaxios":{
+    "prefix":["myaxios"],
+    "body":[
+        "      let token = this.\\$ls.get('token');",
+        "      let url = this.baseapi + '${5:/api/}'; ",
+        "      axios.${10:get}(url,$20{",
+        "          headers: { ",
+        "              'Authorization': `Bearer \\${token}`,  ",
+        "              'Content-Type': 'application/json',",
+        "          } ",
+        "      }).then((rs) => {",
+        "          console.log(rs);",
+        "          if(rs.data.success){",
+        "            $0",
+        "            this.nty.confirm('ค้นหาสำเร็จ');",
+        "          } else {",
+        "            this.nty.alert('ค้นหาไม่สำเร็จสำเร็จ');",
+        "          }",
+        "      }).catch((err) => {",
+        "            console.log('err---->',err); ",
+        "            this.nty.alert('ค้นหาไม่สำเร็จสำเร็จ');",
+        "      });",
+    ],
+    "description":"axios example"
+  }
+
+}

@@ -1,0 +1,26 @@
+#  docker-compose -f docker-compose.yml config check validate config
+version: "3.7"
+services:
+  restapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "limweb/elysia-respapi:v1"
+    container_name: restapi
+    working_dir: /srv/
+    restart: "always"
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    labels:
+      com.docker.compose.project: "restapi"
+      virtual.host: "restapi.local.com"
+      virtual.tls-email: limweb@hotmail.com
+      virtual.port: "3000"
+
+networks:
+  default:
+    external:
+      name: proxy-network
+
